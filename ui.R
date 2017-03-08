@@ -37,18 +37,24 @@ background: -webkit-linear-gradient(to left, #4CB8C4 , #3CD3AD); /* Chrome 10-25
   
   
   # Application title
-  headerPanel("Word Cloud"),
+  headerPanel("A Really Cool Word Cloud"),
   
   # Sidebar with a slider input for number of bins 
   sidebarLayout(
     sidebarPanel(
-       sliderInput("bins",
-                   "Number of bins:",
+      
+      
+       sliderInput("frequency",
+                   "Min Frequency",
                    min = 1,
                    max = 50,
-                   value = 30)
-    ),
-    
+                   value = 30),
+    sliderInput("frequency",
+                "Max Words",
+                min = 1,
+                max = 50,
+                value = 30)
+  ),
     # Show a plot of the generated distribution
     mainPanel(
        plotOutput("distPlot"),headerPanel('Description of Application'),p( 'A word cloud is an image composed of words in a particular text or subject. The size of each word indicates its frequency or importance.

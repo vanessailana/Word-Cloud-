@@ -9,13 +9,14 @@
 
 library(shiny)
 
-# Define server logic required to draw a histogram
-shinyServer(function(input, output) {
-   
-  output$distPlot <- renderPlot({
-    
-
-    
-  })
+function(input,output,session) {
   
-})
+  #define a reactive expression for the document term matrix
+   terms <- reactive({
+     
+     input$update
+     #change book when update;
+     
+     
+   })
+}
